@@ -35,6 +35,7 @@ class LoginView(APIView):
             else:
                 return Response({'error': 'invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
 
+
 class ProfileView(APIView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
